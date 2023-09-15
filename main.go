@@ -64,7 +64,6 @@ func main() {
 
 	var issues []forbidigo.Issue
 	for _, p := range pkgs {
-		fmt.Printf("Set pkgs: %v\n", pkgs)
 		nodes := make([]ast.Node, 0, len(p.Syntax))
 		for _, n := range p.Syntax {
 			nodes = append(nodes, n)
