@@ -1,4 +1,4 @@
-module github.com/ashanbrown/forbidigo
+module github.com/mirecl/forbidigo
 
 go 1.13
 
