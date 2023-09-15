@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/ashanbrown/forbidigo/forbidigo"
+	"github.com/mirecl/forbidigo/forbidigo"
 	"golang.org/x/tools/go/packages"
 )
 
