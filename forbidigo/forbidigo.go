@@ -207,13 +207,13 @@ func (v *visitor) Visit(node ast.Node) ast.Visitor {
 	case *ast.ImportSpec:
 		return nil
 	// Ignore type names
-	// case *ast.TypeSpec:
-	// 	// Look at only type parameters for type spec
-	// 	// if node.TypeParams != nil {
-	// 	// 	ast.Walk(v, node.TypeParams)
-	// 	// }
-	// 	ast.Walk(v, node.Type)
-	// 	return nil
+	case *ast.TypeSpec:
+		// Look at only type parameters for type spec
+		// if node.TypeParams != nil {
+		// 	ast.Walk(v, node.TypeParams)
+		// }
+		ast.Walk(v, node.Type)
+		return nil
 	// Ignore field names
 	case *ast.Field:
 		if node.Type != nil {
