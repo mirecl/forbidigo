@@ -33,6 +33,7 @@ func main() {
 	if patterns == nil {
 		patterns = forbidigo.DefaultPatterns()
 	}
+	fmt.Printf("Set pattern: %v",patterns)
 	options := []forbidigo.Option{
 		forbidigo.OptionExcludeGodocExamples(*excludeGodocExamples),
 		forbidigo.OptionAnalyzeTypes(*analyzeTypes),
@@ -55,6 +56,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Could not load packages: %s", err)
 	}
+	fmt.Printf("Set pkgs: %v",pkgs)
 
 	var issues []forbidigo.Issue
 	for _, p := range pkgs {
