@@ -57,10 +57,14 @@ func main() {
 	if err != nil {
 		log.Fatalf("Could not load packages: %s", err)
 	}
-	fmt.Printf("Set pkgs: %v\n", pkgs)
+
+	for _, p := range pkgs {
+		fmt.Printf("Analyze pkgs: %v\n", p)
+	}
 
 	var issues []forbidigo.Issue
 	for _, p := range pkgs {
+		fmt.Printf("Set pkgs: %v\n", pkgs)
 		nodes := make([]ast.Node, 0, len(p.Syntax))
 		for _, n := range p.Syntax {
 			nodes = append(nodes, n)
