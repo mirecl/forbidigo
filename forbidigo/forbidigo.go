@@ -209,9 +209,9 @@ func (v *visitor) Visit(node ast.Node) ast.Visitor {
 	// Ignore type names
 	case *ast.TypeSpec:
 		// Look at only type parameters for type spec
-		if node.TypeParams != nil {
-			ast.Walk(v, node.TypeParams)
-		}
+		// if node.TypeParams != nil {
+		// 	ast.Walk(v, node.TypeParams)
+		// }
 		ast.Walk(v, node.Type)
 		return nil
 	// Ignore field names
