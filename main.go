@@ -15,7 +15,7 @@ func main() {
 	log.SetFlags(0) // remove log timestamp
 
 	setExitStatus := flag.Bool("set_exit_status", false, "Set exit status to 1 if any issues are found")
-	includeTests := flag.Bool("tests", true, "Include tests")
+	includeTests := flag.Bool("tests", false, "Include tests")
 	excludeGodocExamples := flag.Bool("exclude_godoc_examples", true, "Exclude code in godoc examples")
 	analyzeTypes := flag.Bool("analyze_types", false, "Replace the literal source code based on the semantic of the code before matching against patterns")
 	flag.Parse()
